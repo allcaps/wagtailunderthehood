@@ -1,0 +1,11 @@
+{% extends "webapp/base.html" %}
+
+{% block content %}
+
+  <strong>{{ page.intro }}</strong>
+
+  {% for obj in page.get_children %}
+    <a href="{{ obj.slug }}">{{ obj }}</a>
+  {% endfor %}
+
+{% endblock %}
